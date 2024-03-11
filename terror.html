@@ -1,104 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RetroGames</title>
+    <title>RetroGames - Horror</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    *{
-        margin: 0;
-        padding: 0;
-    }
-        
-    body{
-        color: whitesmoke;
-        background-image: url(Imagenes/fondo.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        font-family: Arial, sans-serif;
-        text-align: center;
-    }
+        body {
+            color: whitesmoke; 
+            background-image: url(Imagenes/fondo.jpg);
+            background-size: cover;
+            background-repeat: repeat;
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            position: relative;
+        }
 
-    img{
-    width: 280px;
-    height: 280px;
-    margin: 30px;
-    border-radius: 30px;    
-    }
+        .container {
+            max-width: 1200px; 
+            margin: 0 auto;
+            padding: 20px; 
+        }
 
-    .lineaDiv{
-        border: 1px solid rgb(105, 105, 105);
-        width: 50%;
-        margin: 20px auto;
-    }
+        .categoria {
+            margin-top: 40px; 
+            display: flex; 
+            flex-wrap: wrap;
+            justify-content: center; 
+        }
 
-    .descripcion{
-        width: 40%; 
-        margin: 0 auto; 
-        text-align: justify; /
-    }
+        .card {
+            background-color: #5e5c5c41; 
+            color: white;
+            border-radius: 10px; 
+            padding: 20px; 
+            margin: 10px; 
+            width: calc(50% - 20px); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            display: flex; 
+        }
 
-    .descripcion p{
-        margin: 10px; /* Espacia titulo, descripcion y precio*/
-    }
+        .card img {
+            width: 150px; 
+            height: 100%; 
+            border-radius: 8px; 
+            margin-right: 20px; 
+        }
 
-    .descripcion p:first-of-type{
-        color: rgb(255, 0, 234);
-        font-size: 20px;
-    }
+        .card-content {
+            flex: 1; 
+            display: flex; 
+            flex-direction: column;
+            justify-content: space-between; 
+        }
 
-    .boton-volver {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    border-radius: 15px;
-    }
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 10px; 
+        }
+
+        .card p {
+            font-size: 16px; 
+            margin-bottom: 10px;
+        }
+
+        .precio {
+            font-size: 18px; 
+            font-weight: bold; 
+        }
+
+        .boton-volver {
+            position:absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+        }
     </style>
 
 </head>
 
 <body>
 
-    <a href="paginainicio.html">
-        <img src="Imagenes/retrogameslogo.png" alt="RetroGames">
-    </a>
+    <div class="container">
+        <a href="paginainicio.html">
+            <img src="Imagenes/retrogameslogo.png" alt="RetroGames">
+        </a>
 
-    <h1>Terror</h1>
+        <h1>Terror</h1>
 
-    <a href="Imagenes/silenthill.jpg">
-        <img src="Imagenes/silenthill.jpg" alt="Image" style="cursor: pointer;">
-    </a>
-    <div class="descripcion">
-        <p>Silent Hill 2</p>
-        <p>Descripción del producto: La historia de Silent Hill 2 al igual que en el videojuego original se desarrolla a comienzos de la década de 1990, en un pequeño y rezagado pueblo rural de Estados Unidos, inicialmente en las zonas despobladas del pueblo de Silent Hill, todo ello siguiendo la estructura de diálogo de James Sunderland y Mary Sunderland en el videojuego original.</p>
-        <p>Precio: $25.000</p>
+        <div class="categoria">
+            <div class="card">
+                <a href="Imagenes/silenthill.jpg">
+                    <img src="Imagenes/silenthill.jpg" alt="Silent Hill" style="cursor: pointer;">
+            </a>
+                <div class="card-content">
+                    <h2>Silent Hill 2</h2>
+                    <p>La historia de Silent Hill 2 al igual que en el videojuego original se desarrolla a comienzos de la década de 1990, en un pequeño y rezagado pueblo rural de Estados Unidos, inicialmente en las zonas despobladas del pueblo de Silent Hill, todo ello siguiendo la estructura de diálogo de James Sunderland y Mary Sunderland en el videojuego original.</p>
+                    <p class="precio">Precio: $25.000</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="Imagenes/alien.jpg">
+                    <img src="Imagenes/alien.jpg" alt="Alien" style="cursor: pointer;">
+            </a>
+                <dic class="card-content">
+                <h2>Alien Isolation</h2>
+                <p>A diferencia de la mayoría de los demás juegos de la franquicia, en Alien: Isolation solo hay un xenomorfo en la mayor parte del juego, y este no puede ser eliminado, haciendo que el jugador debautilizar tácticas de sigilo para sobrevivir.</p>
+                <p class="precio">Precio: $50.000</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="paginainicio.html" class="boton-volver">
+            <img src="Imagenes/volver.png" alt="RetroGames" class="boton-volver">
+        </a>
+
     </div>
-
-
-    <hr Class="lineaDiv">
-
-    <a href="Imagenes/alien.jpg">
-        <img src="Imagenes/alien.jpg" alt="Image" style="cursor: pointer;">
-    </a>
-    <div class="descripcion">
-        <p>Alien Isolation</p>
-        <p>Descripción del producto: A diferencia de la mayoría de los demás juegos de la franquicia, en Alien: Isolation solo hay un xenomorfo en la mayor parte del juego, y este no puede ser eliminado, haciendo que el jugador debautilizar tácticas de sigilo para sobrevivir.
-        </p>
-        <p>Precio: $50.000</p>
-    </div>
-
-    <a href="paginainicio.html">
-        <img src="Imagenes/volver.png" alt="RetroGames" class="boton-volver">
-    </a>
 
 </body>
-
 
 </html>

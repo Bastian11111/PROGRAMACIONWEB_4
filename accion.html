@@ -1,102 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acci&oacute;n</title>
+    <title>RetroGames - Acci&oacute;n</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    *{
-        margin: 0;
-        padding: 0;
-    }
-        
-    body{
-        color: whitesmoke;
-        background-image: url(Imagenes/fondo.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        font-family: Arial, sans-serif;
-        text-align: center;
-    }
+        body {
+            color: whitesmoke; 
+            background-image: url(Imagenes/fondo.jpg); 
+            background-size: cover;
+            background-repeat: repeat;
+            font-family: Arial, sans-serif;
+            text-align: center; 
+            position: relative;
+        }
 
-    img{
-    width: 280px;
-    height: 280px;
-    margin: 30px;
-    border-radius: 30px;    
-    }
+        .container {
+            max-width: 1200px; /* Ancho máximo del contenedor */
+            margin: 0 auto; /* Centrar horizontalmente */
+            padding: 20px; /* Espacio interno */
+        }
 
-    .lineaDiv{
-        border: 1px solid rgb(105, 105, 105);
-        width: 50%;
-        margin: 20px auto;
-    }
+        .categoria {
+            margin-top: 40px; /* Margen superior */
+            display: flex; /* Flexbox para diseño flexible */
+            flex-wrap: wrap; /* Permitir envolver en varias líneas */
+            justify-content: center; /* Centrar elementos */
+        }
 
-    .descripcion{
-        width: 40%; 
-        margin: 0 auto; 
-        text-align: justify; /
-    }
+        .card {
+            background-color: #5e5c5c41; /* Color de fondo del contenedor de tarjeta */
+            color: white; /* Color del texto */
+            border-radius: 10px; /* Bordes redondeados */
+            padding: 20px; /* Espacio interno */
+            margin: 10px; /* Margen exterior */
+            width: calc(50% - 20px); /* Ancho de la tarjeta */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+            display: flex; /* Flexbox para diseño flexible */
+        }
 
-    .descripcion p{
-        margin: 10px; /* Espacia titulo, descripcion y precio*/
-    }
+        .card img {
+            width: 150px; 
+            height: 100%; /* Altura automática (mantener proporción) */
+            border-radius: 8px; /* Bordes redondeados de la imagen */
+            margin-right: 20px; /* Margen derecho */
+        }
 
-    .descripcion p:first-of-type{
-        color: rgb(255, 0, 234);
-        font-size: 20px;
-    }
+        .card-content {
+            flex: 1; /* Toma el espacio restante */
+            display: flex; /* Flexbox para diseño flexible */
+            flex-direction: column; /* Dirección de apilamiento */
+            justify-content: space-between; /* Distribuir el espacio entre los elementos */
+        }
 
-    .boton-volver {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    border-radius: 15px;
-    }
+        .card h2 {
+            font-size: 24px; /* Tamaño de fuente */
+            margin-bottom: 10px; /* Margen inferior */
+        }
 
+        .card p {
+            font-size: 16px; /* Tamaño de fuente */
+            margin-bottom: 10px; /* Margen inferior */
+        }
+
+        .precio {
+            font-size: 18px; /* Tamaño de fuente */
+            font-weight: bold; /* Texto en negrita */
+        }
+
+        .boton-volver {
+            position:absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+        }
     </style>
 
 </head>
 
 <body>
 
-    <a href="paginainicio.html">
-        <img src="Imagenes/retrogameslogo.png" alt="RetroGames">
-    </a>
+    <div class="container">
+        <a href="paginainicio.html">
+            <img src="Imagenes/retrogameslogo.png" alt="RetroGames"> <!-- Logo RetroGames con enlace -->
+        </a>
 
-    <h1>Acci&oacute;n</h1>
+        <h1>Acción</h1> <!-- Encabezado de la categoría -->
 
-    <a href="Imagenes/eldenring.jpg">
-        <img src="Imagenes/eldenring.jpg" alt="Image" style="cursor: pointer;">
-    </a>
-    <div class="descripcion">
-        <p>Elden Ring</p>
-        <p>Descripción del producto: Elden Ring es un videojuego de rol de acción en tercera persona, con una jugabilidad centrada en el combate y la exploración. Presenta características similares de otros juegos desarrollados por FromSoftware, tales como la saga Dark Souls, Bloodborne y Sekiro: Shadows Die Twice.</p>
-        <p>Precio: $60.000</p>
+        <div class="categoria"> <!-- Contenedor de la categoría -->
+            <div class="card"> <!-- Tarjeta 1 -->
+                <a href="Imagenes/eldenring.jpg">
+                    <img src="Imagenes/eldenring.jpg" alt="Elden Ring" style="cursor: pointer;"> <!-- Imagen de Elden Ring -->
+            </a>
+                <div class="card-content"> <!-- Contenido de la tarjeta -->
+                    <h2>Elden Ring</h2> <!-- Título del juego -->
+                    <p>Elden Ring es un videojuego de rol de acción en tercera persona, con una jugabilidad centrada en el combate y la exploración. Presenta características similares de otros juegos desarrollados por FromSoftware, tales como la saga Dark Souls, Bloodborne y Sekiro: Shadows Die Twice.</p> <!-- Descripción del juego -->
+                    <p class="precio">Precio: $60.000</p> <!-- Precio del juego -->
+                </div>
+            </div>
+
+            <div class="card"> <!-- Tarjeta 2 -->
+                <a href="Imagenes/gow.jpg">
+                    <img src="Imagenes/gow.jpg" alt="God of War 2" style="cursor: pointer;"> <!-- Imagen de God of War 2 -->
+            </a>
+                <div class="card-content"> <!-- Contenido de la tarjeta -->
+                    <h2>God of War 2</h2> <!-- Título del juego -->
+                    <p>God of War II es un videojuego de acción y aventuras con elementos de hack and slash. Es un videojuego para un solo jugador en tercera persona visto desde una perspectiva de cámara fija. El jugador controla al personaje Kratos en elementos de combate basado en combos, plataformas y juegos de rompecabezas, y lucha contra enemigos que provienen principalmente de la mitología griega, incluidas harpías, minotauros, gorgonas, grifos, cíclopes, cerberos, sirenas, sátiros y ninfas.</p> <!-- Descripción del juego -->
+                    <p class="precio">Precio: $35.000</p> <!-- Precio del juego -->
+                </div>
+            </div>
+        </div>
+
+        <a href="paginainicio.html" class="boton-volver">
+            <img src="Imagenes/volver.png" alt="RetroGames" class="boton-volver">
+        </a>
     </div>
 
-    <hr Class="lineaDiv">
-
-    <a href="Imagenes/gow.jpg">
-        <img src="Imagenes/gow.jpg" alt="Image" style="cursor: pointer;">
-
-    </a>
-    <div class="descripcion">
-        <p>God of War 2 </p>
-        <p>Descripción del producto: God of War II es un videojuego de acción y aventuras con elementos de hack and slash. Es un videojuego para un solo jugador en tercera persona visto desde una perspectiva de cámara fija. El jugador controla al personaje Kratos en elementos de combate basado en combos, plataformas y juegos de rompecabezas, y lucha contra enemigos que provienen principalmente de la mitología griega, incluidas harpías, minotauros, gorgonas, grifos, cíclopes, cerberos, sirenas, sátiros y ninfas.</p>
-        <p>Precio: $35.000</p>
-    </div>
-
-    <a href="paginainicio.html">
-        <img src="Imagenes/volver.png" alt="RetroGames" class="boton-volver">
-    </a>
 
 </body>
 

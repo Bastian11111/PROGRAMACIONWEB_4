@@ -1,101 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RetroGames</title>
+    <title>RetroGames - Carreras</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    *{
-        margin: 0;
-        padding: 0;
-    }
-        
-    body{
-        color: whitesmoke;
-        background-image: url(Imagenes/fondo.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        font-family: Arial, sans-serif;
-        text-align: center;
-    }
+        body {
+            color: whitesmoke; 
+            background-image: url(Imagenes/fondo.jpg);
+            background-size: cover;
+            background-repeat: repeat;
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            position: relative;
+        }
 
-    img{
-    width: 280px;
-    height: 280px;
-    margin: 30px;
-    border-radius: 30px;    
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto; 
+            padding: 20px; 
+        }
 
-    .lineaDiv{
-        border: 1px solid rgb(105, 105, 105);
-        width: 50%;
-        margin: 20px auto;
-    }
+        .categoria {
+            margin-top: 40px; 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center;
+        }
 
-    .descripcion{
-        width: 40%; 
-        margin: 0 auto; 
-        text-align: justify; /
-    }
+        .card {
+            background-color: #5e5c5c41; 
+            color: white; 
+            border-radius: 10px; 
+            padding: 20px; 
+            margin: 10px; 
+            width: calc(50% - 20px); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            display: flex; 
+        }
 
-    .descripcion p{
-        margin: 10px; /* Espacia titulo, descripcion y precio*/
-    }
+        .card img {
+            width: 150px; 
+            height: 100%; 
+            border-radius: 8px; 
+            margin-right: 20px; 
+        }
 
-    .descripcion p:first-of-type{
-        color: rgb(255, 0, 234);
-        font-size: 20px;
-    }
+        .card-content {
+            flex: 1; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between;
+        }
 
-    .boton-volver {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    border-radius: 15px;
-    }
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 10px; 
+        }
 
+        .card p {
+            font-size: 16px; 
+            margin-bottom: 10px; 
+        }
+
+        .precio {
+            font-size: 18px; 
+            font-weight: bold;
+        }
+
+        .boton-volver {
+            position:absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+        }
     </style>
 
 </head>
 
 <body>
 
-    <a href="paginainicio.html">
-        <img src="Imagenes/retrogameslogo.png" alt="RetroGames">
-    </a>
+    <div class="container">
+        <a href="paginainicio.html">
+            <img src="Imagenes/retrogameslogo.png" alt="RetroGames">
+        </a>
+        <h1>Carreras</h1>
 
-    <h1>Carreras</h1>
+        <div class="categoria">
+            <div class="card">
+                <a href="Imagenes/granturismo.jpg">
+                    <img src="Imagenes/granturismo.jpg" alt="Image" style="cursor: pointer;">
+                </a>
+                <div class="card-content">
+                    <h2>Gran Turismo 7</h2>
+                    <p>Gran Turismo 7 presenta el regreso de la campaña para un jugador, el modo de simulación GT.3​4​ Otras características que regresan son el regreso de las pistas de carreras y los vehículos tradicionales, los eventos especiales, los campeonatos, la escuela de manejo, la tienda de piezas de tuning, el concesionario de autos usados ​​y GT Auto, al mismo tiempo que conservan el nuevo modo GT Sport, Brand Central y Discover que se introdujeron en Gran Turismo Sport.</p>
+                    <p class="precio">Precio: $30.000</p>
+                </div>
+            </div>
 
-    <a href="Imagenes/granturismo.jpg">
-        <img src="Imagenes/granturismo.jpg" alt="Image" style="cursor: pointer;">
-    </a>
-    <div class="descripcion">
-        <p>Gran Turismo 7</p>
-        <p>Descripción del producto: Gran Turismo 7 presenta el regreso de la campaña para un jugador, el modo de simulación GT.3​4​ Otras características que regresan son el regreso de las pistas de carreras y los vehículos tradicionales, los eventos especiales, los campeonatos, la escuela de manejo, la tienda de piezas de tuning, el concesionario de autos usados ​​y GT Auto, al mismo tiempo que conservan el nuevo modo GT Sport, Brand Central y Discover que se introdujeron en Gran Turismo Sport.</p>
-        <p>Precio: $30.000</p>
+            <div class="card">
+                <a href="Imagenes/forza.jpg">
+                    <img src="Imagenes/forza.jpg" alt="Image" style="cursor: pointer;">
+                </a>
+                    <div class="card-content">
+                        <h2>Forza Horizon 5</h2>
+                        <p>Anunciado durante el Xbox & Bethesda Showcase durante el E3 2021, el juego está ambientado en una representación ficticia de México. Forza Horizon 5 se lleva a cabo en México con un modo de campaña aventurero que lleva al jugador a través del país y la inclusión del trazado de rayos en Forzavista.​ </p>         </p>
+                        <p class="precio">Precio: $35.000</p>
+                    </div>
+            </div>
+        </div>
+
+        <a href="paginainicio.html" class="boton-volver">
+            <img src="Imagenes/volver.png" alt="RetroGames" class="boton-volver">
+        </a>
     </div>
-
-    <hr Class="lineaDiv">
-
-    <a href="Imagenes/forza.jpg">
-        <img src="Imagenes/forza.jpg" alt="Image" style="cursor: pointer;">
-    </a>
-    <div class="descripcion">
-        <p>Forza Horizon 5</p>
-        <p>Descripción del producto: Anunciado durante el Xbox & Bethesda Showcase durante el E3 2021, el juego está ambientado en una representación ficticia de México. Forza Horizon 5 se lleva a cabo en México con un modo de campaña aventurero que lleva al jugador a través del país y la inclusión del trazado de rayos en Forzavista.6​7​ </p>
-        <p>Precio: $35.000</p>
-    </div>
-
-    <a href="paginainicio.html">
-        <img src="Imagenes/volver.png" alt="RetroGames" class="boton-volver">
-    </a>
 
 </body>
 
