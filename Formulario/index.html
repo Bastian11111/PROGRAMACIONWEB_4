@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="container"></div>
+
+        <div class="form-content">
+
+            <h1 id="title">Registro</h1>
+
+            <form>
+
+                <div class="input-group">
+                
+                    <!-- *** LAS OPCIONES *** -->
+
+                    <!--NOMBRE-->
+                    <div class="imput-field" id="nameImput"> <!-- nameImput es el id que se le asigna al div -->
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Nombre"> <!-- placeholder es lo que se encuentra dentro de imput -->
+                    </div>
+
+                    <!--AP.PATERNO-->
+                    <div class="imput-field" id="appatImput"> 
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Apellido paterno"> 
+                    </div>
+
+                    <!--AP.PATERNO-->
+                    <div class="imput-field" id="apmatImput"> <!-- nameImput es el id que se le asigna al div -->
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Apellido materno"> <!-- placeholder es lo que se encuentra dentro de imput -->
+                    </div>
+
+                    <!--NOMBRE USUARIO-->
+                    <div class="imput-field" id="usuarioImput"> <!-- nameImput es el id que se le asigna al div -->
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Nombre de usuario"> <!-- placeholder es lo que se encuentra dentro de imput -->
+                    </div>
+
+                    <!--CORREO-->
+                    <div class="imput-field">
+                        <i class="fa-solid fa-envelope"></i> <!-- Solo cambiamos el icono por "fa-envelope" -->
+                        <input type="email" placeholder="Correo"> <!-- Solo cambiamos el icono por "fa-envelope" -->
+                    </div>
+
+                    <!--CLAVE DE INGRESO-->
+                    <div class="imput-field">
+                        <i class="fa-solid fa-lock"></i> <!-- Solo cambiamos el icono por "fa-envelope" -->
+                        <input type="password" placeholder="Clave de ingreso"> <!-- Solo cambiamos el icono por "fa-envelope" -->
+                    </div>
+                    <p>Olvidaste tu contraseña?<a href="#">click aqui</a> </p>
+
+ 
+
+                </div>       
+                
+                <!-- *** BOTONES *** -->
+                <div class="btn-field">
+
+                    <!--BOTON DE REGISTRO-->
+                    <button id="signUn" type="button">Registro</button>
+
+                    <!--BOTON DE INICIO DE SESION-->
+                    <button id="signIp" type="button" class="disable">Login</button>
+                </div>
+            
+            </form>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
