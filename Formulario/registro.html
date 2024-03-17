@@ -116,7 +116,8 @@
         $(document).ready(function(){
             $('#formulario_registro').submit(function(event){
                 event.preventDefault(); 
-        
+
+                //Limpia las alertas cuandos e escribe el dato
                 $('#nameInput-error').text('');
                 $('#appatInput-error').text('');
                 $('#apmatInput-error').text('');
@@ -125,7 +126,8 @@
                 $('#claveInput-error').text('');
                 $('#verificaClaveInput-error').text('');
                 $('#nacimientoInput-error').text('');
-        
+
+                //valida los datos y envia las alertas en el cuadro de texto del dato que falta
                 if($('#nameInput').val() === ''){
                     $('#nameInput-error').text('Por favor, ingresa un nombre');
                     return;
