@@ -5,85 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RetroGames - Carreras</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            color: whitesmoke; 
-            background-image: url(Imagenes/fondo.jpg);
-            background-size: cover;
-            background-repeat: repeat;
-            font-family: Arial, sans-serif; 
-            text-align: center; 
-            position: relative;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto; 
-            padding: 20px; 
-        }
-
-        .categoria {
-            margin-top: 40px; 
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: center;
-        }
-
-        .card {
-            background-color: #5e5c5c41; 
-            color: white; 
-            border-radius: 10px; 
-            padding: 20px; 
-            margin: 10px; 
-            width: calc(50% - 20px); 
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-            display: flex; 
-        }
-
-        .card img {
-            width: 150px; 
-            height: 100%; 
-            border-radius: 8px; 
-            margin-right: 20px; 
-        }
-
-        .card-content {
-            flex: 1; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: space-between;
-        }
-
-        .card h2 {
-            font-size: 24px;
-            margin-bottom: 10px; 
-        }
-
-        .card p {
-            font-size: 16px; 
-            margin-bottom: 10px; 
-        }
-
-        .precio {
-            font-size: 18px; 
-            font-weight: bold;
-        }
-
-        .boton-volver {
-            position:absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/25ac30d53f.js"></script>
 
 </head>
 
@@ -93,6 +16,19 @@
         <a href="paginainicio.html">
             <img src="Imagenes/retrogameslogo.png" alt="RetroGames">
         </a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="paginainicio.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="accion.html"><i class="fa-solid fa-gamepad"></i> Acción</a></li>
+                <li><a href="carreras.html"><i class="fa-solid fa-car"></i> Carreras</a></li>
+                <li><a href="freetoplay.html"><i class="fa-solid fa-face-smile-beam"></i> Free to Play</a></li>
+                <li><a href="mundoabierto.html"><i class="fa-solid fa-earth-americas"></i> Mundo Abierto</a></li>
+                <li><a href="terror.html"><i class="fa-solid fa-ghost"></i> Terror</a></li>
+            </ul>
+        </nav>
+
+        <div class="container border-box">
         <h1>Carreras</h1>
 
         <div class="categoria">
@@ -118,10 +54,7 @@
                     </div>
             </div>
         </div>
-
-        <a href="paginainicio.html" class="boton-volver">
-            <img src="Imagenes/volver.png" alt="RetroGames" class="boton-volver">
-        </a>
+    </div>
     </div>
 
 </body>
