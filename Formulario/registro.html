@@ -111,14 +111,14 @@
 
     <!-- *** SCRIPT QUE PERMITE QUE EL FORMULARIO ATRAPE LOS DATOS *** -->
     
-    <script src="Formulario/jquery-3.7.1.min.js"></script> <!-- Se agrega la libreria de jquery para que funcione el script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- Se agrega la libreria de jquery para que funcione el script -->
 
     <script>
         $(document).ready(function(){
             $('#formulario_registro').submit(function(event){
                 event.preventDefault(); 
 
-                //Limpia las alertas cuandos e escribe el dato
+                //Limpia las alertas cuandos se escribe el dato despues de haber arrojado error
                 $('#nameInput-error').text('');
                 $('#appatInput-error').text('');
                 $('#apmatInput-error').text('');
@@ -175,6 +175,9 @@
         
         
 </script>
+
+</body>
+</html>
 
 
 </body>
