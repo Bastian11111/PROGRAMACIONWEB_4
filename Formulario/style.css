@@ -134,3 +134,12 @@ form p{
     color:#2C2F35; /* es el color del texto del botón */
 }
 
+/*ESTO CAMBIA EL COLOR DE LOS MENSAJES DE ERROR EN EL FORMULARIO AL DEJAR UN CAMPO EN BLANCO*/
+[id$="-error"] {
+    color: #fb8296; /* es el color del texto del mensaje de error */
+}
+
+/* EL COLOR DE LA ETIQUETA FECHA DE NACIMIENTO */
+label {
+    color: #9c9999; 
+}
