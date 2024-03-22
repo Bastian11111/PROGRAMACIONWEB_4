@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+    <!-- *** LIBRERIA DE ESTILOS (6.4.0 RECOMENDADA EN VIDEO DE CLASE *** -->
+    <link rel="stylesheet" href="03-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="container"> </div>
+    <div class="profile-picture">
+        <img src="/Imagenes/15-perfil-usuario.png" alt="Imagen de Perfil">
+    </div>
+        <div class="form-content">
+
+            <h1 id="title">Editar Perfil</h1>
+            
+            <!-- *** FORMULARIO *** -->
+
+            <form id="formulario_registro" action="">
+
+                <div class="input-group">
+                
+                    <!-- *** LAS OPCIONES *** -->
+
+                    <!--USERNAME-->
+                    <div class="input-field"> 
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Nombre de usuario" name="Usuario" id="usuarioInput"> 
+                        <small class='text-danger' id='usuarioInput-error'></small>
+                    </div>
+
+                    <!--CORREO-->
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i> 
+                        <input type="text" placeholder="Correo" name="Correo" id="correoInput"> 
+                        <small class='text-danger' id='correoInput-error'></small>
+                    </div>
+                    <!--CLAVE DE INGRESO-->
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i> 
+                        <input type="text" placeholder="Clave: Al menos: 1 numero y 1 mayuscula" name="Clave" id="claveInput">
+                        <small class='text-danger' id='claveInput-error'></small> 
+                    </div>
+
+                    <!--DIRECCION-->
+                    <div class="input-field"> 
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Direccion de despacho" name="Direccion" id="direccionInput"> 
+                        <small class='text-danger' id='direccionInput-error'></small>
+                    </div>
+
+                    <!--FECHA DE NACIMIENTO-->
+                    <div class="input-field">
+                    <i class="fa-solid fa-calendar"></i>
+                    <label for="nacimientoInput">Fecha de nacimiento</label>
+                    <input type="date" name="Nacimiento" id="nacimientoInput">
+                    <small class='text-danger' id='nacimientoInput-error'></small>
+                    </div>                                   
+
+                    <!-- <p>Olvidaste tu contraseña?<a href="#">click aqui</a> </p> --> <!-- Mensaje de olvidaste tu contraseña, recurso inutilizado por ahora -->
+
+                </div>       
+                
+                <!-- *** BOTONES *** -->
+                <div class="btn-field">
+
+                    <!--BOTON DE REGISTRO-->
+                    <button id="signUp" type="submit">Registro</button> <!-- submit es para que el boton responda-->
+                    <!-- BOTON LIMPIAR DATOS-->
+                    <button id="limpiar" type="reset">Limpiar</button>
+                    <!--BOTON DE INICIO DE SESION-->
+                    <!-- <button id="signIn" type="button" class="disable">Login</button> -->
+                </div>
+            
+            </form>
+
+    </div>
+
+    
+
+    <!-- *** SCRIPT QUE PERMITE QUE EL FORMULARIO ATRAPE LOS DATOS *** -->
+    
+    <script src="jq-3.7.1.min.js"></script><!-- Esto llama a la libreria jqwery que usamos, hasta el momento para la restriccion de campos -->
+
+    <script>
+        $(document).ready(function(){
+            $('#formulario_registro').submit(function(event){
+                event.preventDefault(); 
+
+                //Limpia las alertas cuandos se escribe el dato despues de haber arrojado error
+
+                $('#usuarioInput-error').text('');
+                $('#correoInput-error').text('');
+                $('#claveInput-error').text('');
+                $('#nacimientoInput-error').text('');
+
+                //valida los datos y envia las alertas en el cuadro de texto del dato que falta
+        
+                if($('#usuarioInput').val() === ''){
+                    $('#usuarioInput-error').text('Por favor, ingresa un nombre de usuario');
+                    return;
+                }
+        
+                if($('#correoInput').val() === ''){
+                    $('#correoInput-error').text('Por favor, ingresa un correo electronico');
+                    return;
+                }
+        
+                if($('#claveInput').val() === ''){
+                    $('#claveInput-error').text('Por favor, ingresa una clave de ingreso');
+                    return;
+                }
+        
+                if($('#nacimientoInput').val() === ''){
+                    $('#nacimientoInput-error').text('Por favor, ingresa una fecha de nacimiento');
+                    return;
+                }
+        
+                this.submit();
+            });
+        })
+        
+        
+</script>
+
+</body>
+</html>
+
+
+</body>
+</html>
