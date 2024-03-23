@@ -145,36 +145,58 @@ label {
     color: #9c9999; 
 }
 
-.btn-center {
-    width:100%; /* es el ancho del botón que ocupa el 100% del contenedor */
-    display: flex; /* es para que los elementos hijos se muestren en línea */
-    justify-content: center; /* es para que los elementos hijos se muestren en el espacio entre ellos */
-    align-items: flex-end;
-}
-
-.btn-center button{
-    flex-basis: 48%; /* es el tamaño del botón */
-    font-size: 16px; /* es el tamaño del texto del botón */
-    background-color: #bd04a4; /* es el color de fondo del botón */
-    color: #ffffff; /* es el color del texto del botón */
-    height: 40px; /* es el alto del botón */
-    border-radius: 10px; /* es el radio de las esquinas del botón */
-    border: 0; /* es el borde del botón */
-    outline: 0;  /* es para que el botón no tenga un borde al hacer clic */
-    cursor: pointer; /* es para que el cursor se muestre como un puntero al pasar el ratón por encima del botón */
-    transition: background 1s; /* es la duración de la transición */
-}
-
-
-.profile-picture{
+.button-container {
     position: absolute;
-    top: 75px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 20px;
+    right: 20px;
+    display: flex;
 }
 
-.profile-picture img{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+.button-container button {
+    margin-left: 10px;
+    background-color: #bd04a4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #9c027e; /* Darker shade on hover */
+}
+
+.forgot-password {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #ffffff; /* Change link color to #bd04a4 */
+    text-decoration: none; /* Remove underline */
+}
+
+.forgot-password a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.btn-field a,
+.btn-field button {
+    flex-basis: 48%;
+    font-size: 16px;
+    background-color: #bd04a4;
+    color: #ffffff;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-field a:hover,
+.btn-field button:hover {
+    background-color: #9c027e; /* Darker shade on hover */
 }
