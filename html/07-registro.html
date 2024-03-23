@@ -63,14 +63,14 @@
                     <!--CLAVE DE INGRESO-->
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i> 
-                        <input type="password" placeholder="Clave: Al menos: 1 numero y 1 mayuscula" name="Clave" id="claveInput">
+                        <input type="password" placeholder="Clave: Al menos: 1 numero y 1 mayuscula" name="Clave" id="claveInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}">
                         <small class='text-danger' id='claveInput-error'></small> 
                     </div>
                     
                     <!--VERIFICAR CLAVE DE INGRESO-->
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i> 
-                        <input type="password" placeholder="Repite clave: Asegurate de que sea igual" name="VerificadorClave" id="verificaClaveInput"> 
+                        <input type="password" placeholder="Repite clave: Asegurate de que sea igual" name="VerificadorClave" id="verificaClaveInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}"> 
                         <small class='text-danger' id='verificaClaveInput-error'></small>
                     </div> 
 
