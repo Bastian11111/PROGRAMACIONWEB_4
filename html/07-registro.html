@@ -177,7 +177,16 @@
                     alert('Por favor, ingresa una fecha de nacimiento');
                     return;
                 }
-        
+                
+                // validacion de que la clave y la confirmacion de la clave son iguales
+
+                const clave = $('#claveInput').val();
+                const verificaClave = $('#verificaClaveInput').val();
+                if (clave !== verificaClave) {
+                    $('#verificaClaveInput-error').text('Las contraseñas no coinciden');
+                    alert('Las contraseñas no coinciden');
+                return;
+                }
                 this.submit();
             });
         })
