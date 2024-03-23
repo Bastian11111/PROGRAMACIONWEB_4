@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Editar Perfil</title>
 
     <!-- *** LIBRERIA DE ESTILOS (6.4.0 RECOMENDADA EN VIDEO DE CLASE *** -->
     <link rel="stylesheet" href="/css/02-registro-style.css">
@@ -11,10 +11,7 @@
 
 </head>
 <body>
-    <div class="container"> </div>
-    <div class="profile-picture">
-        <img src="/Imagenes/15-perfil-usuario.png" alt="Imagen de Perfil">
-    </div>
+    <div class="container"> 
         <div class="form-content">
 
             <h1 id="title">Editar Perfil</h1>
@@ -37,13 +34,13 @@
                     <!--CORREO-->
                     <div class="input-field">
                         <i class="fa-solid fa-envelope"></i> 
-                        <input type="text" placeholder="Correo" name="Correo" id="correoInput"> 
+                        <input type="text" placeholder="Correo" name="Correo" id="correoInput" pattern=".+@.+\..+"> 
                         <small class='text-danger' id='correoInput-error'></small>
                     </div>
                     <!--CLAVE DE INGRESO-->
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i> 
-                        <input type="text" placeholder="Clave: Al menos: 1 numero y 1 mayuscula" name="Clave" id="claveInput">
+                        <input type="password" placeholder="Clave: Al menos: 1 numero y 1 mayuscula" name="Clave" id="claveInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}">
                         <small class='text-danger' id='claveInput-error'></small> 
                     </div>
 
@@ -78,7 +75,7 @@
                 </div>
             
             </form>
-
+        </div>
     </div>
 
     
@@ -118,6 +115,24 @@
         
                 if($('#nacimientoInput').val() === ''){
                     $('#nacimientoInput-error').text('Por favor, ingresa una fecha de nacimiento');
+                    alert('Por favor, ingresa una fecha de nacimiento');
+                    return;
+                }
+                
+                
+                // calcular la edad en base a nacimientoInput
+                var nacimiento = new Date($('#nacimientoInput').val());
+                var hoy = new Date();
+                var edad = hoy.getFullYear() - nacimiento.getFullYear();
+                var difmes = hoy.getMonth() - nacimiento.getMonth();
+                if (difmes < 0 || (difmes === 0 && hoy.getDate() < nacimiento.getDate())) {
+                    edad--;
+                }
+
+                // revisar si la fecha es menor a 13 
+                if (edad < 13) {
+                    $('#nacimientoInput-error').text('Debes tener al menos 13 años para poder registrarte.');
+                    alert('Debes tener al menos 13 años para poder registrarte.');
                     return;
                 }
         
