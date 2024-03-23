@@ -30,6 +30,7 @@ body{
     padding: 50px 60px 70px; /* es el espacio interior del formulario */
     text-align: center; /* es para que el texto del formulario se muestre en el centro */
     border-radius: 25px; /* es el radio de las esquinas del formulario */
+    position: relative;
 }   
 
 
@@ -142,4 +143,38 @@ form p{
 /* EL COLOR DE LA ETIQUETA FECHA DE NACIMIENTO */
 label {
     color: #9c9999; 
+}
+
+.btn-center {
+    width:100%; /* es el ancho del botón que ocupa el 100% del contenedor */
+    display: flex; /* es para que los elementos hijos se muestren en línea */
+    justify-content: center; /* es para que los elementos hijos se muestren en el espacio entre ellos */
+    align-items: flex-end;
+}
+
+.btn-center button{
+    flex-basis: 48%; /* es el tamaño del botón */
+    font-size: 16px; /* es el tamaño del texto del botón */
+    background-color: #bd04a4; /* es el color de fondo del botón */
+    color: #ffffff; /* es el color del texto del botón */
+    height: 40px; /* es el alto del botón */
+    border-radius: 10px; /* es el radio de las esquinas del botón */
+    border: 0; /* es el borde del botón */
+    outline: 0;  /* es para que el botón no tenga un borde al hacer clic */
+    cursor: pointer; /* es para que el cursor se muestre como un puntero al pasar el ratón por encima del botón */
+    transition: background 1s; /* es la duración de la transición */
+}
+
+
+.profile-picture{
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.profile-picture img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }
