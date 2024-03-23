@@ -187,6 +187,22 @@
                     alert('Las contraseñas no coinciden');
                 return;
                 }
+                
+                // calcular la edad en base a nacimientoInput
+                var nacimiento = new Date($('#nacimientoInput').val());
+                var hoy = new Date();
+                var edad = hoy.getFullYear() - nacimiento.getFullYear();
+                var difmes = hoy.getMonth() - nacimiento.getMonth();
+                if (difmes < 0 || (difmes === 0 && hoy.getDate() < nacimiento.getDate())) {
+                    edad--;
+                }
+
+                // revisar si la fecha es menor a 13 
+                if (edad < 13) {
+                    $('#nacimientoInput-error').text('Debes tener al menos 13 años para poder registrarte.');
+                    alert('Debes tener al menos 13 años para poder registrarte.');
+                return;
+                }
                 this.submit();
             });
         })
