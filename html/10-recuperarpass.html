@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Recuperar contraseña</title>
 
     <!-- *** LIBRERIA DE ESTILOS (6.4.0 RECOMENDADA EN VIDEO DE CLASE *** -->
-    <link rel="stylesheet" href="03-style.css">
+    <link rel="stylesheet" href="/css/02-registro-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
-    <div class="container"> </div>
+    <div class="container"> 
 
         <div class="form-content">
 
@@ -31,7 +31,7 @@
                     </p>
                     <div class="input-field"> 
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Ingrese correo electronico" name="Correo" id="usuarioCorreoInput"> 
+                        <input type="text" placeholder="Ingrese correo electronico" name="Correo" id="usuarioCorreoInput" pattern=".+@+\..+"> 
                         <small class='text-danger' id='usuarioCorreoInput-error'></small>
                     </div>
                     <!-- <p>Olvidaste tu contraseña?<a href="#">click aqui</a> </p> --> <!-- Mensaje de olvidaste tu contraseña, recurso inutilizado por ahora -->
@@ -39,15 +39,16 @@
                 </div>       
                 
                 <!-- *** BOTONES *** -->
-                <div class="btn-center">
-
+                <div class="btn-field">
+                    <a href="/html/01-paginainicio.html"><button>Volver</button></a>
                     <!--BOTON PARA ENVIAR-->
                     <button id="enviarDato" type="submit" >Enviar</button> <!-- submit es para que el boton responda-->
+     
 
                 </div>
             
             </form>
-
+        </div>
     </div>
 
     

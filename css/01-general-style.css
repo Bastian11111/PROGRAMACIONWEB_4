@@ -111,3 +111,25 @@ p{
     font-weight: bold; /* Texto en negrita */
 }
 
+.button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+}
+
+.button-container button {
+    margin-left: 10px;
+    background-color: #bd04a4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #9c027e; /* Darker shade on hover */
+}
