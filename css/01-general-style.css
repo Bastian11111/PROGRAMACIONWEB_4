@@ -5,7 +5,7 @@
     
 body {
     color: whitesmoke; 
-    background-image: url("/Imagenes/00-fondo.jpg"); /*Esta referencia no esta funcionando*/
+    background-image: url("../Imagenes/00-fondo.jpg"); /*Esta referencia no esta funcionando*/
     background-color: black;
     background-size: cover;
     background-repeat: repeat;
