@@ -15,7 +15,7 @@ body{
 .container {
     width: 100%; /* es el ancho del contenedor que ocupa el 100% de la pantalla */
     /*height: 100vh;*/  /*es el alto del contenedor que ocupa el 100% de la pantalla, ERROR: DEJA LA WEB EN BLANCO */
-    background-color: #2C2F35; /* es el color de fondo del contenedor */
+    background-color: rgb(141, 217, 255); /* es el color de fondo del contenedor */
     display: flex; /* es para que los elementos hijos se muestren en línea */
     align-items: center; /* es para que los elementos hijos se muestren en el centro vertical */
     justify-content: center; /* es para que los elementos hijos se muestren en el centro */
@@ -26,7 +26,7 @@ body{
 .form-content {
     width: 100%; /* es el ancho del formulario que ocupa el 100% del contenedor */
     max-width: 450px; /* es el ancho máximo del formulario */
-    background-color: #2C2F35; /* es el color de fondo del formulario */
+    background-color: rgb(145, 200, 249); /* es el color de fondo del formulario */
     padding: 50px 60px 70px; /* es el espacio interior del formulario */
     text-align: center; /* es para que el texto del formulario se muestre en el centro */
     border-radius: 25px; /* es el radio de las esquinas del formulario */
@@ -47,7 +47,7 @@ body{
     width: 30px; /* es el ancho de la línea */
     height: 4px; /* es el alto de la línea */
     border-radius: 3px; /* es el radio de las esquinas del borde */
-    background: #fb5dd6; /* es el color de fondo de la línea */
+    background: yellow; /* es el color de fondo de la línea */
     position: absolute; /* es para que la línea se muestre en la posición absoluta */
     bottom: -12px; /* es la distancia entre la línea y el texto */
     left: 50%; /* es la distancia entre la línea y el borde izquierdo */
@@ -83,7 +83,7 @@ input::placeholder{
 /*INPUT-FIELD I ES PARA EL ICONO DEL CAMPO DE TEXTO*/
 .input-field i{
     margin-left: 15px; /* es el espacio entre el icono y el borde izquierdo del campo de texto */
-    color: #d43ec0; /* es el color del icono */
+    color: yellow; /* es el color del icono */
     font-size: 13px; /* es el tamaño del icono */
 }
 
@@ -111,7 +111,7 @@ form p{
 .btn-field button{
     flex-basis: 48%; /* es el tamaño del botón */
     font-size: 16px; /* es el tamaño del texto del botón */
-    background-color: #bd04a4; /* es el color de fondo del botón */
+    background-color: yellow; /* es el color de fondo del botón */
     color: #ffffff; /* es el color del texto del botón */
     height: 40px; /* es el alto del botón */
     border-radius: 10px; /* es el radio de las esquinas del botón */
@@ -137,7 +137,7 @@ form p{
 
 /*ESTO CAMBIA EL COLOR DE LOS MENSAJES DE ERROR EN EL FORMULARIO AL DEJAR UN CAMPO EN BLANCO*/
 [id$="-error"] {
-    color: #fb8296; /* es el color del texto del mensaje de error */
+    color: #f73354; /* es el color del texto del mensaje de error */
 }
 
 /* EL COLOR DE LA ETIQUETA FECHA DE NACIMIENTO */
@@ -154,7 +154,7 @@ label {
 
 .button-container button {
     margin-left: 10px;
-    background-color: #bd04a4;
+    background-color: rgb(145, 200, 249);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -165,7 +165,7 @@ label {
 }
 
 .button-container button:hover {
-    background-color: #9c027e; /* Darker shade on hover */
+    background-color: #2e53fa; /* Darker shade on hover */
 }
 
 .forgot-password {
@@ -186,7 +186,7 @@ label {
 .btn-field button {
     flex-basis: 48%;
     font-size: 16px;
-    background-color: #bd04a4;
+    background-color: #2e53fa;
     color: #ffffff;
     height: 40px;
     border-radius: 10px;
@@ -198,6 +198,6 @@ label {
 
 .btn-field a:hover,
 .btn-field button:hover {
-    background-color: #9c027e; /* Darker shade on hover */
+    background-color: #7e93f1; /* Darker shade on hover */
 }
 

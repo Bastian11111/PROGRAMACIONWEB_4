@@ -4,14 +4,16 @@
 }
     
 body {
-    color: whitesmoke; 
-    background-image: url("../Imagenes/00-fondo.jpg"); /*Esta referencia no esta funcionando*/
-    background-color: black;
+    color: rgb(45, 45, 45); 
+    background-color: rgb(214, 232, 240);
     background-size: cover;
     background-repeat: repeat;
     font-family: Arial, sans-serif; 
     text-align: center; 
     position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 img{
@@ -35,11 +37,25 @@ p{
     padding: 20px; /* Espacio interno */
 }
 /* menu para mejor navegacion*/
+
+/* BARRA DE NAVEGACION CON CATEGORIAS */
 .navbar{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    background-color: #69a9f3;
+    padding: 10px;
 }
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar-item {
+    float: left;
+    margin-right: 10px;
+}
+
 
 .navbar ul{
     list-style: none;
@@ -48,12 +64,17 @@ p{
     justify-content: center;
 }
 
+.navbar-link {
+    text-decoration: none;
+    color: black;
+}
+
 .navbar ul li {
     margin: 0 10px;
 }
 
 .navbar ul li a{
-    color: #fff;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -106,6 +127,7 @@ p{
     margin-bottom: 10px; /* Margen inferior */
 }
 
+
 .precio {
     font-size: 18px; /* Tamaño de fuente */
     font-weight: bold; /* Texto en negrita */
@@ -118,10 +140,30 @@ p{
     display: flex;
 }
 
+/* Botón para comprar*/
+button {
+    background-color: #fd2424; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+    padding: 15px 32px; /* Ajusta el padding del botón */
+    text-align: center; /* Centra el texto del botón */
+    text-decoration: none; /* Elimina la decoración del texto del botón */
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar sobre el botón */
+}
+
+/* Cambia el color de fondo del botón comprar al pasar el cursor sobre él */
+button:hover {
+    background-color: #ff6348; /* Color de fondo del botón al pasar el cursor sobre él */
+    color: white; /* Color del texto del botón al pasar el cursor sobre él */
+}
+
 .button-container button {
     margin-left: 10px;
-    background-color: #bd04a4;
-    color: white;
+    background-color: rgb(118, 191, 247);
+    color: rgb(57, 57, 57);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -131,5 +173,34 @@ p{
 }
 
 .button-container button:hover {
-    background-color: #9c027e; /* Darker shade on hover */
+    background-color: yellow;
+}
+
+/* Mover el logo a la izquierda */
+#logo {
+    display: block;
+    margin-right: auto;
+}
+
+/* FOOTER (Parte inferior e iconos de redes) */
+.footer {
+    background-color: #6d90f7;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons i {
+    font-size: 24px;
 }
